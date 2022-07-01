@@ -17,7 +17,7 @@ const modalConfigRef = computed(() => {
   const parentIdItem = modalConfig.formItems.find(
     (item) => item.field === "parentId"
   )
-  parentIdItem!.options = store.state.entireDepartment.map((item) => {
+  parentIdItem!.options = store.state.entireDepartment.map((item: any) => {
     return { title: item.name, value: item.id }
   })
   return modalConfig
