@@ -69,7 +69,7 @@ const handleCheckChange = (data1: any, data2: any) => {
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .menu-tree {
   margin-left: 25px;
 }
