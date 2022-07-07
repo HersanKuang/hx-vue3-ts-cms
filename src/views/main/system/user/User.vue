@@ -76,4 +76,4 @@ const [pageModalRef, defaultInfo, handleNewData, handleEditData] = usePageModal(
   </div>
 </template>
 
-<style scoped lang="less"></style>
+<style lang="less" scoped></style>
