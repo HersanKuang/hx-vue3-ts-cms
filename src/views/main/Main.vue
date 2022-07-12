@@ -28,7 +28,7 @@ const handleFoldChange = (isFold: boolean) => {
   </div>
 </template>
 
-<style lang="less" scope>
+<style lang="less">
 .main {
   position: fixed;
   top: 0;
