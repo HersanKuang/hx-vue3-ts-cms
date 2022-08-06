@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, withDefaults, toRefs } from "@vue/runtime-core"
+import { withDefaults, toRefs } from "vue"
 import { IBreadcrumb } from "../types"
 
 interface Props {

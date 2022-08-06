@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-import {
-  ref,
-  onMounted,
-  defineProps,
-  withDefaults,
-  watchEffect
-} from "@vue/runtime-core"
+import { ref, onMounted, withDefaults, watchEffect } from "vue"
 import { EChartsOption } from "echarts"
 import useEchart from "../hooks/useEchart"
 

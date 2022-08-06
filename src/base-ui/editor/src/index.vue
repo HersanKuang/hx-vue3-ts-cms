@@ -5,9 +5,7 @@ import {
   onBeforeUnmount,
   ref,
   reactive,
-  withDefaults,
-  defineProps,
-  defineEmits
+  withDefaults
 } from "vue"
 import type Editor from "wangeditor"
 import WangEditor from "wangeditor"

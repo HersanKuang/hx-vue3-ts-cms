@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from "@vue/runtime-core"
+import { ref } from "vue"
 import NavHeader from "@/components/nav-header"
 import NavMenu from "@/components/nav-menu"
 const isCollapse = ref(false)

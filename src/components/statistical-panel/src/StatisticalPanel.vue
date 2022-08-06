@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, withDefaults } from "vue"
+import { withDefaults } from "vue"
 import HxCounterUp from "@/base-ui/count-up"
 import { Warning } from "@element-plus/icons-vue"
 

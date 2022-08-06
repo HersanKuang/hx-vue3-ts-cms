@@ -1,38 +1,21 @@
-<script lang="ts">
-import { ref, defineComponent } from "vue"
+<script lang="ts" setup>
+import { ref } from "vue"
 import LoginAccount from "./LoginAccount.vue"
 import LoginPhone from "./LoginPhone.vue"
 import { UserFilled, Iphone } from "@element-plus/icons-vue"
 
-export default defineComponent({
-  components: {
-    LoginAccount,
-    LoginPhone,
-    UserFilled,
-    Iphone
-  },
-  setup() {
-    const isKeepPassword = ref(true)
-    const accountRef = ref<InstanceType<typeof LoginAccount>>()
-    const phoneRef = ref<InstanceType<typeof LoginPhone>>()
-    const currentTab = ref("account")
+const isKeepPassword = ref(true)
+const accountRef = ref<InstanceType<typeof LoginAccount>>()
+const phoneRef = ref<InstanceType<typeof LoginPhone>>()
+const currentTab = ref("account")
 
-    const handleLoginClick = () => {
-      if (currentTab.value === "account") {
-        accountRef.value?.loginAction(isKeepPassword.value)
-      } else {
-        console.log("phoneRef调用loginAction")
-      }
-    }
-    return {
-      isKeepPassword,
-      accountRef,
-      phoneRef,
-      handleLoginClick,
-      currentTab
-    }
+const handleLoginClick = () => {
+  if (currentTab.value === "account") {
+    accountRef.value?.loginAction(isKeepPassword.value)
+  } else {
+    console.log("phoneRef调用loginAction")
   }
-})
+}
 </script>
 
 <template>

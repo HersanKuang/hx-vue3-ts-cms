@@ -1,12 +1,5 @@
 <script lang="ts" setup>
-import {
-  defineProps,
-  computed,
-  defineExpose,
-  ref,
-  watch,
-  defineEmits
-} from "@vue/runtime-core"
+import { computed, ref, watch } from "vue"
 import { useStore } from "@/store"
 import HxTable from "@/base-ui/table"
 import { EditPen, Delete } from "@element-plus/icons-vue"

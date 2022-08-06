@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from "@vue/runtime-core"
+import { computed } from "vue"
 import { useStore } from "@/store"
 import HxCard from "@/base-ui/card"
 import statisticalPanel from "@/components/statistical-panel"

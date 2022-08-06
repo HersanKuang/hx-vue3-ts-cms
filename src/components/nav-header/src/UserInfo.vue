@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, reactive, toRefs } from "@vue/runtime-core"
+import { computed, reactive, toRefs } from "vue"
 import { useStore } from "@/store"
 import { useRouter } from "vue-router"
 import localCache from "@/utils/cache"

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, defineProps, withDefaults, ref } from "@vue/runtime-core"
+import { computed, withDefaults, ref } from "vue"
 import { useRouter, useRoute } from "vue-router"
 import { useStore } from "@/store"
 import { pathMapToMenu } from "@/utils/map-menus"

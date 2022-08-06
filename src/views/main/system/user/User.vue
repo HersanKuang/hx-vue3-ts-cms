@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from "@vue/runtime-core"
+import { computed } from "vue"
 import { useStore } from "@/store"
 import PageSearch from "@/components/page-search"
 import PageContent from "@/components/page-content"

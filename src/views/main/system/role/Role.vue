@@ -1,5 +1,5 @@
-<script lang="ts">
-import { defineComponent, computed, ref, nextTick } from "vue"
+<script lang="ts" setup>
+import { computed, ref, nextTick } from "vue"
 import { useStore } from "@/store"
 import { menuMapLeafKeys } from "@/utils/map-menus"
 import { ElTree } from "element-plus"
@@ -11,52 +11,30 @@ import { contentTableConfig } from "./config/content.config"
 import { modalConfig } from "./config/modal.config"
 import { usePageModal } from "@/hooks/usePageModal"
 
-export default defineComponent({
-  name: "role",
-  components: {
-    PageContent,
-    PageSearch,
-    PageModal
-  },
-  setup() {
-    // 1.处理pageModal的hook
-    const elTreeRef = ref<InstanceType<typeof ElTree>>()
-    const editCallback = (item: any) => {
-      const leafKeys = menuMapLeafKeys(item.menuList)
-      nextTick(() => {
-        console.log(elTreeRef.value)
-        elTreeRef.value?.setCheckedKeys(leafKeys, false)
-      })
-    }
-    const [pageModalRef, defaultInfo, handleNewData, handleEditData] =
-      usePageModal(undefined, editCallback)
+// 1.处理pageModal的hook
+const elTreeRef = ref<InstanceType<typeof ElTree>>()
+const editCallback = (item: any) => {
+  const leafKeys = menuMapLeafKeys(item.menuList)
+  nextTick(() => {
+    console.log(elTreeRef.value)
+    elTreeRef.value?.setCheckedKeys(leafKeys, false)
+  })
+}
+const [pageModalRef, defaultInfo, handleNewData, handleEditData] = usePageModal(
+  undefined,
+  editCallback
+)
 
-    const store = useStore()
-    const menus = computed(() => store.state.entireMenu)
+const store = useStore()
+const menus = computed(() => store.state.entireMenu)
 
-    const otherInfo = ref({})
-    const handleCheckChange = (data1: any, data2: any) => {
-      const checkedKeys = data2.checkedKeys
-      const halfCheckedKeys = data2.halfCheckedKeys
-      const menuList = [...checkedKeys, ...halfCheckedKeys]
-      otherInfo.value = { menuList }
-    }
-
-    return {
-      searchFormConfig,
-      contentTableConfig,
-      modalConfig,
-      pageModalRef,
-      defaultInfo,
-      handleNewData,
-      handleEditData,
-      menus,
-      otherInfo,
-      handleCheckChange,
-      elTreeRef
-    }
-  }
-})
+const otherInfo = ref({})
+const handleCheckChange = (data1: any, data2: any) => {
+  const checkedKeys = data2.checkedKeys
+  const halfCheckedKeys = data2.halfCheckedKeys
+  const menuList = [...checkedKeys, ...halfCheckedKeys]
+  otherInfo.value = { menuList }
+}
 </script>
 
 <template>

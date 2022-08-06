@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, withDefaults, onMounted, ref, watch } from "vue"
+import { withDefaults, onMounted, ref, watch } from "vue"
 // http://inorganik.github.io/countUp.js/
 import { CountUp } from "countup.js"
 import type { CountUpOptions } from "countup.js"

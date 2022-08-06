@@ -1,6 +1,6 @@
 <script lang="ts">
-import { ElForm } from "element-plus"
 import { reactive, ref, defineComponent } from "vue"
+import { ElForm } from "element-plus"
 import { useStore } from "@/store"
 import { rules } from "../config/account-config"
 import localCache from "@/utils/cache"
@@ -13,7 +13,7 @@ export default defineComponent({
     })
     const formRef = ref<InstanceType<typeof ElForm>>()
     const loginAction = (isKeepPassword: boolean) => {
-      formRef.value?.validate((valid) => {
+      formRef.value?.validate((valid: any) => {
         if (valid) {
           // 1.判断是否需要记住密码
           if (isKeepPassword) {

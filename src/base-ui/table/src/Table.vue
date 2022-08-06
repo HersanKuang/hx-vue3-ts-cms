@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-import {
-  defineProps,
-  withDefaults,
-  toRefs,
-  defineEmits
-} from "@vue/runtime-core"
+import { withDefaults, toRefs } from "vue"
 
 interface Props {
   title?: string

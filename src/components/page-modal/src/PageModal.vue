@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-import {
-  ref,
-  defineProps,
-  withDefaults,
-  defineExpose,
-  watch
-} from "@vue/runtime-core"
+import { ref, withDefaults, watch } from "vue"
 import { useStore } from "vuex"
 import hxForm from "@/base-ui/form"
 

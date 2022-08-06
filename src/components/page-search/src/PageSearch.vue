@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, defineProps, defineEmits } from "@vue/runtime-core"
+import { ref } from "vue"
 import HxForm from "@/base-ui/form"
 import { Refresh, Search } from "@element-plus/icons-vue"
 

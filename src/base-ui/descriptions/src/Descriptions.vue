@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, withDefaults, toRefs } from "vue"
+import { withDefaults, toRefs } from "vue"
 
 interface Props {
   title?: string

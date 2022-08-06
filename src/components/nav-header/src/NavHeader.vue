@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, defineEmits, computed } from "@vue/runtime-core"
+import { ref, computed } from "vue"
 import { useStore } from "@/store"
 import { useRoute } from "vue-router"
 import HxBreadcrumb from "@/base-ui/breadcrumb"

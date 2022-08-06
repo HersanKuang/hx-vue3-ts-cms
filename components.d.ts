@@ -42,7 +42,6 @@ declare module 'vue' {
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTag: typeof import('element-plus/es')['ElTag']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
-    ElTree: typeof import('element-plus/es')['ElTree']
     LineEchart: typeof import('./src/components/page-echarts/src/LineEchart.vue')['default']
     MapEchart: typeof import('./src/components/page-echarts/src/MapEchart.vue')['default']
     NavHeader: typeof import('./src/components/nav-header/src/NavHeader.vue')['default']

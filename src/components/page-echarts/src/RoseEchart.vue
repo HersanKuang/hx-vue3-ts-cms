@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, defineProps } from "@vue/runtime-core"
+import { computed } from "vue"
 import BaseEchart from "@/base-ui/echart"
 import { IDataType } from "../types"
 
