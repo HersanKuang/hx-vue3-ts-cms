@@ -12,4 +12,4 @@ import { contentTableConfig } from "./config/content.config"
   </div>
 </template>
 
-<style lang="" scoped></style>
+<style lang="less" scoped></style>
