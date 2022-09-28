@@ -1188,20 +1188,42 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
+"@jridgewell/gen-mapping@^0.3.0":
+  "integrity" "sha512-mh65xKQAzI6iBcFzwv28KVWSmCkdRBWoOh+bYQGW3+6OZvbbN3TqMGo5hqYxQniRcH9F2VZIoJCm4pa3BPDK/A=="
+  "resolved" "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.2.tgz"
+  "version" "0.3.2"
+  dependencies:
+    "@jridgewell/set-array" "^1.0.1"
+    "@jridgewell/sourcemap-codec" "^1.4.10"
+    "@jridgewell/trace-mapping" "^0.3.9"
+
 "@jridgewell/resolve-uri@^3.0.3":
   "integrity" "sha512-VPeQ7+wH0itvQxnG+lIzWgkysKIr3L9sslimFW55rHMdGu/qCQ5z5h9zq4gI8uBtqkpHhsF4Z/OwExufUCThew=="
   "resolved" "https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.0.5.tgz"
   "version" "3.0.5"
+
+"@jridgewell/set-array@^1.0.1":
+  "integrity" "sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGasABV9qXASMKnFMwMw=="
+  "resolved" "https://registry.npmjs.org/@jridgewell/set-array/-/set-array-1.1.2.tgz"
+  "version" "1.1.2"
+
+"@jridgewell/source-map@^0.3.2":
+  "integrity" "sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw=="
+  "resolved" "https://registry.npmjs.org/@jridgewell/source-map/-/source-map-0.3.2.tgz"
+  "version" "0.3.2"
+  dependencies:
+    "@jridgewell/gen-mapping" "^0.3.0"
+    "@jridgewell/trace-mapping" "^0.3.9"
 
 "@jridgewell/sourcemap-codec@^1.4.10":
   "integrity" "sha512-Fg32GrJo61m+VqYSdRSjRXMjQ06j8YIYfcTqndLYVAaHmroZHLJZCydsWBOTDqXS2v+mjxohBWEMfg97GXmYQg=="
   "resolved" "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.11.tgz"
   "version" "1.4.11"
 
-"@jridgewell/trace-mapping@^0.3.0":
-  "integrity" "sha512-vFv9ttIedivx0ux3QSjhgtCVjPZd5l46ZOMDSCwnH1yUO2e964gO8LZGyv2QkqcgR6TnBU1v+1IFqmeoG+0UJQ=="
-  "resolved" "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.4.tgz"
-  "version" "0.3.4"
+"@jridgewell/trace-mapping@^0.3.0", "@jridgewell/trace-mapping@^0.3.9":
+  "integrity" "sha512-oWZNOULl+UbhsgB51uuZzglikfIKSUBO/M9W2OfEjn7cmqoAiCgmv9lyACTUacZwBz0ITnJ2NqjU8Tx0DHL88g=="
+  "resolved" "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.15.tgz"
+  "version" "0.3.15"
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
@@ -2514,11 +2536,16 @@
   "version" "4.0.7"
 
 "async@^2.6.2":
-  "integrity" "sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg=="
-  "resolved" "https://registry.npmjs.org/async/-/async-2.6.3.tgz"
-  "version" "2.6.3"
+  "integrity" "sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA=="
+  "resolved" "https://registry.npmjs.org/async/-/async-2.6.4.tgz"
+  "version" "2.6.4"
   dependencies:
     "lodash" "^4.17.14"
+
+"async@^3.2.4":
+  "integrity" "sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ=="
+  "resolved" "https://registry.npmjs.org/async/-/async-3.2.4.tgz"
+  "version" "3.2.4"
 
 "at-least-node@^1.0.0":
   "integrity" "sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg=="
@@ -8126,11 +8153,6 @@
   "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   "version" "0.6.1"
 
-"source-map@~0.7.2":
-  "integrity" "sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ=="
-  "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz"
-  "version" "0.7.3"
-
 "sourcemap-codec@^1.4.8":
   "integrity" "sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA=="
   "resolved" "https://registry.npmjs.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz"
@@ -8544,14 +8566,14 @@
     "source-map" "^0.6.1"
     "terser" "^5.7.2"
 
-"terser@^5.10.0", "terser@^5.7.2":
-  "integrity" "sha512-NXbs+7nisos5E+yXwAD+y7zrcTkMqb0dEJxIGtSKPdCBzopf7ni4odPul2aechpV7EXNvOudYOX2bb5tln1jbQ=="
-  "resolved" "https://registry.npmjs.org/terser/-/terser-5.12.1.tgz"
-  "version" "5.12.1"
+"terser@^5.10.0", "terser@^5.15.0", "terser@^5.7.2":
+  "integrity" "sha512-L1BJiXVmheAQQy+as0oF3Pwtlo4s3Wi1X2zNZ2NxOB4wx9bdS9Vk67XQENLFdLYGCK/Z2di53mTj/hBafR+dTA=="
+  "resolved" "https://registry.npmjs.org/terser/-/terser-5.15.0.tgz"
+  "version" "5.15.0"
   dependencies:
+    "@jridgewell/source-map" "^0.3.2"
     "acorn" "^8.5.0"
     "commander" "^2.20.0"
-    "source-map" "~0.7.2"
     "source-map-support" "~0.5.20"
 
 "text-extensions@^1.0.0":
