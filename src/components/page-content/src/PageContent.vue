@@ -125,14 +125,14 @@ const handleEditClick = (item: any) => {
           <el-button
             v-if="isUpdate"
             size="small"
-            type="text"
+            link
             @click="handleEditClick(scope.row)"
             ><el-icon><edit-pen /></el-icon>编辑</el-button
           >
           <el-button
             v-if="isDelete"
             size="small"
-            type="text"
+            link
             @click="handleDeleteClick(scope.row)"
             ><el-icon><delete /></el-icon>删除</el-button
           >
@@ -153,12 +153,20 @@ const handleEditClick = (item: any) => {
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .page-content {
   padding: 0 20px 20px 20px;
   border-top: 20px solid #f5f5f5;
   .el-icon {
     margin-right: 4px;
+  }
+  .handle-btns {
+    .el-icon {
+      color: #409eff;
+    }
+    .el-button {
+      color: #409eff;
+    }
   }
 }
 </style>

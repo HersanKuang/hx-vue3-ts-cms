@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from "vue"
 import HxEditor from "@/base-ui/editor"
-const htmlString = ref<string>("内卷起来，不负好时光。")
+const htmlString = ref<string>("写下你的故事")
 </script>
 
 <template>

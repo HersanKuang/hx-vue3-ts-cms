@@ -8,7 +8,7 @@ interface Props {
   propList?: any[]
   showIndexColumn?: boolean
   showSelectColumn?: boolean
-  page?: object
+  page?: any
   childrenProps?: object
   showFooter?: boolean
 }
