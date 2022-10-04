@@ -1,6 +1,6 @@
 {
   "name": "hx-vue3-ts-cms",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

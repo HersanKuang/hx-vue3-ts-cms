@@ -59,7 +59,7 @@ const handleExitClick = () => {
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .user-info {
   position: relative;
   text-align: left;
