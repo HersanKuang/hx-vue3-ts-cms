@@ -2,13 +2,14 @@
 import { computed } from "vue"
 import BaseEchart from "@/base-ui/echart"
 import { IDataType } from "../types"
+type EChartsOption = echarts.EChartsOption
 
 interface Props {
   pieData: IDataType[]
 }
 const props = defineProps<Props>()
 
-const pieOption = computed(() => {
+const pieOption = computed((): EChartsOption => {
   return {
     tooltip: {
       trigger: "item"

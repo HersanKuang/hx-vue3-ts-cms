@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, withDefaults } from "vue"
 import BaseEchart from "@/base-ui/echart"
+type EChartsOption = echarts.EChartsOption
 
 interface Props {
   title?: string
@@ -10,7 +11,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   title: ""
 })
-const options = computed(() => {
+const options = computed((): EChartsOption => {
   return {
     title: {
       text: props.title
@@ -61,7 +62,7 @@ const options = computed(() => {
 
 <template>
   <div class="line-echart">
-    <base-echart :options="options" />
+    <base-echart ref="baseEchart" :options="options" />
   </div>
 </template>
 

@@ -2,13 +2,14 @@
 import { computed } from "vue"
 import BaseEchart from "@/base-ui/echart"
 import { IDataType } from "../types"
+type EChartsOption = echarts.EChartsOption
 
 interface Props {
   roseData: IDataType[]
 }
 const props = defineProps<Props>()
 
-const options = computed(() => {
+const options = computed((): EChartsOption => {
   return {
     toolbox: {
       show: true,

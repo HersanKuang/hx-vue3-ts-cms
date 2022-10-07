@@ -2,6 +2,7 @@
 import { computed, withDefaults } from "vue"
 import BaseEchart from "@/base-ui/echart"
 import * as echarts from "echarts"
+type EChartsOption = echarts.EChartsOption
 
 interface Props {
   title?: string
@@ -11,7 +12,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   title: ""
 })
-const options = computed(() => {
+const options = computed((): EChartsOption => {
   return {
     title: {
       text: "支持鼠标滚动缩放"

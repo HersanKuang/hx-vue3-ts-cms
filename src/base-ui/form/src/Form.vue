@@ -3,7 +3,7 @@ import { withDefaults, toRefs } from "vue"
 import { IFormItem } from "../types"
 
 interface Props {
-  modelValue: object
+  modelValue: any
   formItems: IFormItem[]
   labelWidth?: string
   itemStyle?: object
