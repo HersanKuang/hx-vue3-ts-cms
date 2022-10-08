@@ -12,7 +12,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   title: ""
 })
-const options = computed((): EChartsOption => {
+const options = computed<EChartsOption>(() => {
   return {
     title: {
       text: "支持鼠标滚动缩放"

@@ -9,7 +9,7 @@ interface Props {
 }
 const props = defineProps<Props>()
 
-const pieOption = computed((): EChartsOption => {
+const pieOption = computed<EChartsOption>(() => {
   return {
     tooltip: {
       trigger: "item"

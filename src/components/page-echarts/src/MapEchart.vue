@@ -11,7 +11,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   title: ""
 })
-const options = computed((): any => {
+const options = computed<any>(() => {
   return {
     backgroundColor: "#fff",
     title: {

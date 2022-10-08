@@ -9,7 +9,7 @@ interface Props {
 }
 const props = defineProps<Props>()
 
-const options = computed((): EChartsOption => {
+const options = computed<EChartsOption>(() => {
   return {
     toolbox: {
       show: true,
