@@ -53,13 +53,13 @@ class HXRequest {
         // 将loading移除
         this.loading?.close()
 
-        const data = res.data
         // if (data.returnCode === "-1001") {
         //   console.log("请求失败!,错误信息")
         // } else {
         //   return data
         // }
-        return data
+
+        return res.data
       },
       (err) => {
         // 例子:判断不同的HttpErrorCode显示不同的错误信息
