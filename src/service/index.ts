@@ -7,7 +7,7 @@ const hxRequest = new HXRequest({
   baseURL: BASE_URL,
   timeout: TIME_OUT,
   interceptors: {
-    requestInterceptor: (config) => {
+    requestSuccessFn: (config) => {
       // 携带token的拦截
       const token = localCache.getCache("token")
       if (token) {
@@ -16,13 +16,13 @@ const hxRequest = new HXRequest({
 
       return config
     },
-    requestInterceptorCatch: (err) => {
+    requestFailureFn: (err) => {
       return err
     },
-    responseInterceptor: (config) => {
+    responseSuccessFn: (config) => {
       return config
     },
-    responseInterceptorCatch: (err) => {
+    responseFailureFn: (err) => {
       return err
     }
   }

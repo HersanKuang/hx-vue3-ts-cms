@@ -24,12 +24,12 @@ class HXRequest {
     // 使用拦截器
     // 1.从config中取出的拦截器是对应的实例的拦截器
     this.instance.interceptors.request.use(
-      this.interceptors?.requestInterceptor,
-      this.interceptors?.requestInterceptorCatch
+      this.interceptors?.requestSuccessFn,
+      this.interceptors?.requestFailureFn
     )
     this.instance.interceptors.response.use(
-      this.interceptors?.responseInterceptor,
-      this.interceptors?.responseInterceptorCatch
+      this.interceptors?.responseSuccessFn,
+      this.interceptors?.responseFailureFn
     )
 
     // 2.添加所有实例的拦截器
@@ -74,8 +74,8 @@ class HXRequest {
   request<T = any>(config: HXRequestConfig<T>): Promise<T> {
     return new Promise((resolve, reject) => {
       // 1.单个请求对请求config的处理
-      if (config.interceptors?.requestInterceptor) {
-        config = config.interceptors.requestInterceptor(config)
+      if (config.interceptors?.requestSuccessFn) {
+        config = config.interceptors.requestSuccessFn(config)
       }
       // 2.判断是否需要显示loading
       if (config.showLoading === false) {
@@ -85,8 +85,8 @@ class HXRequest {
         .request<any, T>(config)
         .then((res) => {
           // 1.单个请求对数据的处理
-          if (config.interceptors?.responseInterceptor) {
-            res = config.interceptors.responseInterceptor(res)
+          if (config.interceptors?.responseSuccessFn) {
+            res = config.interceptors.responseSuccessFn(res)
           }
           // console.log(res)
 
