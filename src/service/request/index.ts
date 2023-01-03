@@ -52,13 +52,6 @@ class HXRequest {
       (res) => {
         // 将loading移除
         this.loading?.close()
-
-        // if (data.returnCode === "-1001") {
-        //   console.log("请求失败!,错误信息")
-        // } else {
-        //   return data
-        // }
-
         return res.data
       },
       (err) => {
@@ -88,11 +81,8 @@ class HXRequest {
           if (config.interceptors?.responseSuccessFn) {
             res = config.interceptors.responseSuccessFn(res)
           }
-          // console.log(res)
-
           // 2.将showLoading设置为初始值true,这样不会影响下一个请求
           this.showLoading = DEFAULT_LOADING
-
           // 3.将结果resolve返回出去
           resolve(res)
         })
