@@ -97,14 +97,12 @@ class HXRequest {
   get<T = any>(config: HXRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: "GET" })
   }
-
   post<T = any>(config: HXRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: "POST" })
   }
   delete<T = any>(config: HXRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: "DELETE" })
   }
-
   patch<T = any>(config: HXRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: "PATCH" })
   }
