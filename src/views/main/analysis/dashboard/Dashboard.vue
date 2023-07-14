@@ -2,7 +2,7 @@
 import { computed } from "vue"
 import { useStore } from "@/store"
 import HxCard from "@/base-ui/card"
-import StatisticalPanel from "@/components/statistical-panel"
+import statisticalPanel from "@/components/statistical-panel"
 import {
   PieEchart,
   RoseEchart,
