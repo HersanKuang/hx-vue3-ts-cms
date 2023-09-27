@@ -60,13 +60,13 @@ const handleMenuItemClick = (item: any) => {
               <span v-if="item.name">{{ item.name }}</span>
             </template>
             <!-- 遍历里边的item -->
-            <template v-for="subitem in item.children" :key="subitem.id">
+            <template v-for="subItem in item.children" :key="subItem.id">
               <el-menu-item
-                :index="subitem.id + ''"
-                @click="handleMenuItemClick(subitem)"
+                :index="subItem.id + ''"
+                @click="handleMenuItemClick(subItem)"
               >
                 <template #title>
-                  <span v-if="subitem.name">{{ subitem.name }}</span>
+                  <span v-if="subItem.name">{{ subItem.name }}</span>
                 </template>
               </el-menu-item>
             </template>

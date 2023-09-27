@@ -37,7 +37,7 @@ const handleFoldClick = () => {
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .nav-header {
   display: flex;
   width: 100%;

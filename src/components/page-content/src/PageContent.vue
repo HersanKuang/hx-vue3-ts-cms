@@ -55,18 +55,14 @@ const dataCount = computed(() =>
 )
 
 // 4.获取其他的动态插槽名称
+const excludedSlots = ["status", "createAt", "updateAt", "handle"]
+
 const otherPropSlots = props.contentTableConfig?.propList.filter(
-  (item: any) => {
-    if (item.slotName === "status") return false
-    if (item.slotName === "createAt") return false
-    if (item.slotName === "updateAt") return false
-    if (item.slotName === "handle") return false
-    return true
-  }
+  (item: any) => !excludedSlots.includes(item.slotName)
 )
+
 // 5.删除/编辑/新建操作
 const handleDeleteClick = (item: any) => {
-  console.log(item)
   store.dispatch("system/deletePageDataAction", {
     pageName: props.pageName,
     id: item.id
