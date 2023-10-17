@@ -133,7 +133,7 @@ const setEditorConfig = () => {
     ref="editorRef"
     class="hx-editor"
     :style="{ width: width ? `${width}px` : '100%' }"
-  ></div>
+  />
 </template>
 
 <style lang="less" scoped>

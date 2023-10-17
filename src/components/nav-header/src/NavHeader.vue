@@ -5,6 +5,7 @@ import { useRoute } from "vue-router"
 import HxBreadcrumb from "@/base-ui/breadcrumb"
 import { pathMapBreadcrumbs } from "@/utils/map-menus"
 import { ArrowRight, ArrowLeft } from "@element-plus/icons-vue"
+import UserInfo from "@/components/nav-header/src/UserInfo.vue"
 
 const store = useStore()
 const breadcrumbs = computed(() => {
@@ -26,9 +27,9 @@ const handleFoldClick = () => {
 
 <template>
   <div class="nav-header">
-    <el-icon class="fold-menu" :size="24" @click="handleFoldClick"
-      ><component :is="isFold ? ArrowLeft : ArrowRight"
-    /></el-icon>
+    <el-icon class="fold-menu" :size="24" @click="handleFoldClick">
+      <component :is="isFold ? ArrowLeft : ArrowRight" />
+    </el-icon>
     <div class="content">
       <hx-breadcrumb :breadcrumbs="breadcrumbs" />
       <user-info />
