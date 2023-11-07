@@ -1,17 +1,10 @@
-<script lang="ts">
-import { reactive, defineComponent } from "vue"
+<script lang="ts" setup>
+import { reactive } from "vue"
 import { rules } from "../config/phone-config"
-export default defineComponent({
-  setup() {
-    const phone = reactive({
-      num: "",
-      code: ""
-    })
-    return {
-      rules,
-      phone
-    }
-  }
+
+const phone = reactive({
+  num: "",
+  code: ""
 })
 </script>
 
@@ -31,7 +24,7 @@ export default defineComponent({
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .get-code {
   display: flex;
 }

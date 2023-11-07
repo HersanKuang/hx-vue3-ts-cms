@@ -4,11 +4,11 @@ import LoginPanel from "./cpns/LoginPanel.vue"
 
 <template>
   <div class="login">
-    <login-panel></login-panel>
+    <login-panel />
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .login {
   display: flex;
   justify-content: center;
