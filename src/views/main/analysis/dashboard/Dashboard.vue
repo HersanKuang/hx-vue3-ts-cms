@@ -98,7 +98,7 @@ const addressGoodsSale = computed(() => {
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .dashboard {
   background-color: #f5f5f5;
 
