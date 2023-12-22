@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { ref } from "vue"
-import HxForm from "@/base-ui/form"
+import HxForm, { IForm } from "@/base-ui/form"
 import { Refresh, Search } from "@element-plus/icons-vue"
 
 interface Props {
-  searchFormConfig: any
+  searchFormConfig: IForm
 }
 const props = defineProps<Props>()
 
@@ -43,10 +43,10 @@ const handleQueryClick = () => {
       </template>
       <template #footer>
         <div class="handle-btns">
-          <el-button @click="handleResetClick"
-            ><el-icon :size="15" class="footer-icon"><refresh /></el-icon
-            >重置</el-button
-          >
+          <el-button @click="handleResetClick">
+            <el-icon :size="15" class="footer-icon"><refresh /></el-icon>
+            重置
+          </el-button>
           <el-button type="primary" @click="handleQueryClick"
             ><el-icon :size="15" class="footer-icon"><search /></el-icon
             >搜索</el-button
@@ -57,16 +57,14 @@ const handleQueryClick = () => {
   </div>
 </template>
 
-<style lang="less" scope>
+<style lang="less" scoped>
 .page-search {
   .hx-form {
     padding-top: 22px;
     padding-right: 50px;
 
     .header {
-      margin: 0 auto;
-      margin-top: 20px;
-      margin-bottom: 30px;
+      margin: 20px auto 30px;
       color: red;
     }
     .handle-btns {

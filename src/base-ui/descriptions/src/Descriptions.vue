@@ -27,7 +27,7 @@ const { title, column, tableDatas } = toRefs(props)
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .description {
   margin-bottom: 20px;
 }
