@@ -61,9 +61,7 @@ const options = computed<EChartsOption>(() => {
 </script>
 
 <template>
-  <div class="line-echart">
-    <base-echart ref="baseEchart" :options="options" />
-  </div>
+  <base-echart ref="baseEchart" class="line-echart" :options="options" />
 </template>
 
-<style lang="less"></style>
+<style lang="less" scoped></style>
