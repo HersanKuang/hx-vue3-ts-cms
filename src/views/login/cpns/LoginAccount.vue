@@ -47,4 +47,11 @@ defineExpose({
   </div>
 </template>
 
-<style lang="less"></style>
+<style lang="less" scoped>
+.account {
+  height: 68px;
+}
+:deep(.el-form-item__content) {
+  margin-top: 6px;
+}
+</style>
