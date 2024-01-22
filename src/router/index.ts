@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router"
-import type { RouteRecordRaw } from "vue-router"
-
+import Login from "@/views/login/Login.vue"
 import localCache from "@/utils/cache"
 import { firstMenu } from "@/utils/map-menus"
+import type { RouteRecordRaw } from "vue-router"
 
 const routes: RouteRecordRaw[] = [
   {
@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/login",
     name: "login",
-    component: () => import("@/views/login/Login.vue")
+    component: Login
   },
   {
     path: "/main",

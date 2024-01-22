@@ -77,7 +77,7 @@ const handleMenuItemClick = (item: any) => {
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .nav-menu {
   height: 100%;
   background-color: #001529;
