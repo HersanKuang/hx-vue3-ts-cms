@@ -25,12 +25,12 @@ import {
       <hx-descriptions
         title="生产环境依赖"
         :column="2"
-        :table-datas="dependencies"
+        :table-data="dependencies"
       />
       <hx-descriptions
         title="开发环境依赖"
         :column="2"
-        :table-datas="devDependencies"
+        :table-data="devDependencies"
       />
     </hx-card>
     <hx-card title="项目结构">
@@ -42,7 +42,7 @@ import {
       <hx-descriptions
         title="文件命名规范"
         :column="1"
-        :table-datas="[
+        :table-data="[
           { name: '文件夹', description: '统一小写, 多个单词使用-分割' },
           {
             name: '文件(.ts .vue .json .d.ts)',
@@ -53,7 +53,7 @@ import {
       <hx-descriptions
         title="编写组件规范"
         :column="1"
-        :table-datas="[
+        :table-data="[
           { name: '组件的文件', description: '统一大写开头，驼峰命名' },
           {
             name: '组件的目录结构',
@@ -94,7 +94,7 @@ import {
     <hx-card title="Git提交规范">
       <hx-descriptions
         :column="1"
-        :table-datas="[
+        :table-data="[
           { name: 'add 操作', description: 'git add ' },
           { name: 'commit 操作', description: 'yarn commit ' },
           { name: 'pull 操作', description: 'git pull ' },
